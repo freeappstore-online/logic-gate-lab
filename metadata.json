@@ -1,0 +1,8 @@
+{
+  "name": "FreeAppStore Studio & Connected Workbench",
+  "description": "Comprehensive developer studio, SDK runtime simulator, compliance auditor, and reference connected app for FreeAppStore.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
