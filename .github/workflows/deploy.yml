@@ -18,6 +18,8 @@ jobs:
       - uses: actions/checkout@v4
 
       - uses: pnpm/action-setup@v4
+        with:
+          version: 9
 
       - uses: actions/setup-node@v4
         with:
@@ -56,6 +58,7 @@ jobs:
 
       - name: Code health scan
         run: npx @vibecodeqa/cli@0.31 --json --badge > /dev/null 2>&1 || true
+
       - name: Upload code health
         if: always()
         env:
@@ -68,9 +71,4 @@ jobs:
           EP="https://$R2_ACCOUNT_ID.r2.cloudflarestorage.com"
           if [ -f .vibe-check/report.json ]; then
             aws s3 cp .vibe-check/report.json "s3://fas-apps/apps/$APP_ID/.vcqa/report.json" \
-              --endpoint-url "$EP" --content-type application/json --no-progress
-          fi
-          if [ -f .vibe-check/badge.svg ]; then
-            aws s3 cp .vibe-check/badge.svg "s3://fas-apps/apps/$APP_ID/.vcqa/badge.svg" \
-              --endpoint-url "$EP" --content-type image/svg+xml --no-progress
-          fi
+              --
