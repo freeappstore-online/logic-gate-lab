@@ -10,13 +10,6 @@
     "clean": "node -e \"const fs = require('fs'); ['dist', 'server.js', 'web/dist'].forEach(d => fs.rmSync(d, {recursive: true, force: true}))\"",
     "lint": "tsc --noEmit"
   },
-  "pnpm": {
-    "onlyBuiltDependencies": [
-      "@google/genai",
-      "esbuild",
-      "protobufjs"
-    ]
-  },
   "dependencies": {
     "@google/genai": "^2.4.0",
     "@tailwindcss/vite": "^4.3.3",
