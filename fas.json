@@ -1,0 +1,6 @@
+{
+  "appId": "logic-gate-lab",
+  "applicationRoot": ".",
+  "outputPath": "web/dist",
+  "buildCommand": "pnpm build"
+}
