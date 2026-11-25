@@ -1,6 +1,6 @@
 {
   "name": "react-example",
-  "packageManager": "pnpm@9.15.4",
+  "packageManager": "pnpm@10.30.3",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -23,7 +23,7 @@
     "react": "^19.0.1",
     "react-dom": "^19.0.1",
     "vite": "^8.3.0",
-    "@freeappstore/sdk": "^0.16.39"
+    "@freeappstore/sdk": "^0.17.2"
   },
   "devDependencies": {
     "@types/canvas-confetti": "^1.9.0",
